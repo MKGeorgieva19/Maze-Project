@@ -7,8 +7,19 @@ void printMenu()
 {
     // The names of variables are not final!
 
-    int option_counter = 0;
+    int option_counter = 1;
     bool user_choice = false;
+
+    cout << "==============================" << endl;
+    cout << "             MENU             " << endl;
+    cout << "==============================" << endl;
+    cout << "                              " << endl;
+    cout << "       -> Play            " << endl;
+    cout << "          About             " << endl;
+    cout << "          Team             " << endl;
+    cout << "          Exit             " << endl;
+    cout << "                              " << endl;
+    cout << "==============================" << endl;
 
     while (true)
     {
@@ -31,15 +42,7 @@ void printMenu()
             break;
 
         case ENTER:
-            if (option_counter != 0)
-                user_choice = true;
-            else
-                option_counter++;
-            break;
-
-        default:
-            if (option_counter == 0)
-                option_counter++;
+            user_choice = true;
             break;
         }
 
