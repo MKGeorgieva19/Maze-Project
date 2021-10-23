@@ -5,8 +5,6 @@
 
 void printMenu()
 {
-    // The names of variables are not final!
-
     int option_counter = 1;
     bool user_choice = false;
 
@@ -27,7 +25,7 @@ void printMenu()
 
         system("CLS");
 
-        // Where to add title function in the future
+        // will add title function in the future
 
         switch (user_input)
         {
@@ -112,8 +110,31 @@ void printMenu()
 
         else
         {
-            // goToChoice(option_counter);
+            goToChoice(option_counter);
             break;
         }
+    }
+}
+
+int goToChoice(int option)
+{
+    switch (option)
+    {
+    case 1:
+        // askForDifficulty();
+        break;
+
+    case 2:
+        // about();
+        break;
+
+    case 3:
+        // team();
+        break;
+
+    case 4:
+        system("CLS");
+        cout << "Thank you for playing our game! :)" << endl;
+        exit(0);
     }
 }
