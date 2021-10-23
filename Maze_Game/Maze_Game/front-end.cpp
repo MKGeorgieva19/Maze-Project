@@ -7,7 +7,6 @@ void printMenu()
 {
     // The names of variables are not final!
 
-    bool first_start = true;
     int option_counter = 0;
     bool user_choice = false;
 
@@ -16,10 +15,8 @@ void printMenu()
         int user_input = _getch();
 
         system("CLS");
-        
-        // Where to add title function in the future
 
-        // Might try to separate the switch and getch into a seperate function in the future
+        // Where to add title function in the future
 
         switch (user_input)
         {
@@ -34,70 +31,86 @@ void printMenu()
             break;
 
         case ENTER:
-            if(option_counter > 0)
+            if (option_counter != 0)
                 user_choice = true;
-            option_counter++;
+            else
+                option_counter++;
             break;
+
         default:
+            if (option_counter == 0)
+                option_counter++;
             break;
         }
 
-        cout << "==============================" << endl;
-        cout << "             MENU             " << endl;
-        cout << "==============================" << endl;
-        cout << "                              " << endl;
-
-
-        switch (option_counter)
+        if (!user_choice)
         {
-        case 1:
-            cout << "       -> Play            " << endl;
-            cout << "          About             " << endl;
-            cout << "          Team             " << endl;
-            cout << "          Exit             " << endl;
-
-            if (user_choice == true)
-                cout << "play()"; // just for testing
-            break;
-
-        case 2:
-            cout << "          Play            " << endl;
-            cout << "       -> About             " << endl;
-            cout << "          Team             " << endl;
-            cout << "          Exit             " << endl;
-
-            if (user_choice == true)
-                cout << "about()"; // just for testing
-            break;
-
-        case 3:
-            cout << "          Play            " << endl;
-            cout << "          About             " << endl;
-            cout << "       -> Team             " << endl;
-            cout << "          Exit             " << endl;
-
-            if (user_choice == true)
-                cout << "team()"; // just for testing
-            break;
-
-        case 4:
-            cout << "          Play            " << endl;
-            cout << "          About             " << endl;
-            cout << "          Team             " << endl;
-            cout << "       -> Exit             " << endl;
-
-            if (user_choice == true)
+            switch (option_counter)
             {
-                cout << "exit()"; // just for testing
-                /*
-                    system("CLS");
-                    cout << "Thank you for playing our game! :)" << endl;
-                    exit(0);
-                */
+            case 1:
+                cout << "==============================" << endl;
+                cout << "             MENU             " << endl;
+                cout << "==============================" << endl;
+                cout << "                              " << endl;
+                cout << "       -> Play            " << endl;
+                cout << "          About             " << endl;
+                cout << "          Team             " << endl;
+                cout << "          Exit             " << endl;
+                cout << "                              " << endl;
+                cout << "==============================" << endl;
+
+                break;
+
+            case 2:
+                cout << "==============================" << endl;
+                cout << "             MENU             " << endl;
+                cout << "==============================" << endl;
+                cout << "                              " << endl;
+                cout << "          Play            " << endl;
+                cout << "       -> About             " << endl;
+                cout << "          Team             " << endl;
+                cout << "          Exit             " << endl;
+                cout << "                              " << endl;
+                cout << "==============================" << endl;
+
+                break;
+
+            case 3:
+                cout << "==============================" << endl;
+                cout << "             MENU             " << endl;
+                cout << "==============================" << endl;
+                cout << "                              " << endl;
+                cout << "          Play            " << endl;
+                cout << "          About             " << endl;
+                cout << "       -> Team             " << endl;
+                cout << "          Exit             " << endl;
+                cout << "                              " << endl;
+                cout << "==============================" << endl;
+
+
+                break;
+
+            case 4:
+                cout << "==============================" << endl;
+                cout << "             MENU             " << endl;
+                cout << "==============================" << endl;
+                cout << "                              " << endl;
+                cout << "          Play            " << endl;
+                cout << "          About             " << endl;
+                cout << "          Team             " << endl;
+                cout << "       -> Exit             " << endl;
+                cout << "                              " << endl;
+                cout << "==============================" << endl;
+
+
+                break;
             }
+        }
+
+        else
+        {
+            // goToChoice(option_counter);
             break;
         }
-        cout << "                              " << endl;
-        cout << "==============================" << endl;
     }
 }
