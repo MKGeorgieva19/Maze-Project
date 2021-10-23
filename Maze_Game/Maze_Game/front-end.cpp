@@ -12,10 +12,10 @@ void printMenu()
     cout << "             MENU             " << endl;
     cout << "==============================" << endl;
     cout << "                              " << endl;
-    cout << "       -> Play            " << endl;
-    cout << "          About             " << endl;
-    cout << "          Team             " << endl;
-    cout << "          Exit             " << endl;
+    cout << "          -> Play            " << endl;
+    cout << "             About             " << endl;
+    cout << "             Team             " << endl;
+    cout << "             Exit             " << endl;
     cout << "                              " << endl;
     cout << "==============================" << endl;
 
@@ -53,10 +53,10 @@ void printMenu()
                 cout << "             MENU             " << endl;
                 cout << "==============================" << endl;
                 cout << "                              " << endl;
-                cout << "       -> Play            " << endl;
-                cout << "          About             " << endl;
-                cout << "          Team             " << endl;
-                cout << "          Exit             " << endl;
+                cout << "          -> Play            " << endl;
+                cout << "             About             " << endl;
+                cout << "             Team             " << endl;
+                cout << "             Exit             " << endl;
                 cout << "                              " << endl;
                 cout << "==============================" << endl;
 
@@ -67,10 +67,10 @@ void printMenu()
                 cout << "             MENU             " << endl;
                 cout << "==============================" << endl;
                 cout << "                              " << endl;
-                cout << "          Play            " << endl;
-                cout << "       -> About             " << endl;
-                cout << "          Team             " << endl;
-                cout << "          Exit             " << endl;
+                cout << "             Play            " << endl;
+                cout << "          -> About             " << endl;
+                cout << "             Team             " << endl;
+                cout << "             Exit             " << endl;
                 cout << "                              " << endl;
                 cout << "==============================" << endl;
 
@@ -81,10 +81,10 @@ void printMenu()
                 cout << "             MENU             " << endl;
                 cout << "==============================" << endl;
                 cout << "                              " << endl;
-                cout << "          Play            " << endl;
-                cout << "          About             " << endl;
-                cout << "       -> Team             " << endl;
-                cout << "          Exit             " << endl;
+                cout << "             Play            " << endl;
+                cout << "             About             " << endl;
+                cout << "          -> Team             " << endl;
+                cout << "             Exit             " << endl;
                 cout << "                              " << endl;
                 cout << "==============================" << endl;
 
@@ -96,10 +96,10 @@ void printMenu()
                 cout << "             MENU             " << endl;
                 cout << "==============================" << endl;
                 cout << "                              " << endl;
-                cout << "          Play            " << endl;
-                cout << "          About             " << endl;
-                cout << "          Team             " << endl;
-                cout << "       -> Exit             " << endl;
+                cout << "             Play            " << endl;
+                cout << "             About             " << endl;
+                cout << "             Team             " << endl;
+                cout << "          -> Exit             " << endl;
                 cout << "                              " << endl;
                 cout << "==============================" << endl;
 
