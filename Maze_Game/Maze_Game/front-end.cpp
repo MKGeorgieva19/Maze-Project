@@ -138,3 +138,13 @@ int goToChoice(int option)
         exit(0);
     }
 }
+
+void about()
+{
+    // about information
+}
+
+void team()
+{
+    // team information
+}
