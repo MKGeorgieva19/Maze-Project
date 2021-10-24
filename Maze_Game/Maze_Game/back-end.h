@@ -11,3 +11,11 @@ using namespace std;
 #define DOWN      80
 
 char** createMaze(unsigned difficulty);
+
+int getMazeRows(int difficulty);
+
+int getMazeCols(int difficulty);
+
+void game(char** maze, int rows, int cols);
+
+void displayMaze(char** maze, int rows, int cols);

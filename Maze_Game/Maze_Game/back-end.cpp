@@ -102,3 +102,52 @@ char** createMaze(unsigned difficulty) // Curent maze design is temporary
 
     return maze;
 }
+
+int getMazeRows(int difficulty)
+{
+    switch (difficulty)
+    {
+    case 1:
+        return 13;
+    }
+}
+
+int getMazeCols(int difficulty)
+{
+    switch (difficulty)
+    {
+    case 1:
+        return 19;
+    }
+}
+
+void game(char** maze, int rows, int cols)
+{
+    bool win = false;
+
+    while (!win)
+    {
+        displayMaze(maze, rows, cols);
+
+        win = true; // just to see if maze prints out
+
+        // makeMove(maze);
+    }
+
+    // da naprawq funkciq deto samo izwejda mazeto
+
+    // drugoto ot taq funkciq da sa wuwejdane i checkowe
+}
+
+void displayMaze(char** maze, int rows, int cols)
+{
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < cols; j++)
+        {
+            cout << maze[i][j];
+        }
+
+        cout << endl;
+    }
+}

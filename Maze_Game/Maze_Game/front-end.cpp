@@ -382,7 +382,7 @@ void askForDifficulty()
 
         else
         {
-            // createMaze(option_counter);
+            game(createMaze(option_counter), getMazeRows(option_counter), getMazeCols(option_counter));
             break;
         }
     }
