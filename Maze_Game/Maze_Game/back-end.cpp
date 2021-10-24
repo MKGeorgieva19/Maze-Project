@@ -7,13 +7,13 @@ int currentX = 1, currentY = 0;
 
 char** createMaze(unsigned difficulty) // Curent maze design is temporary
 {
-    unsigned size = 40;
+    unsigned max_size = 40;
     char** maze = 0;
-    maze = new char* [size];
+    maze = new char* [max_size];
 
-    for (unsigned i = 0; i < size; i++)
+    for (unsigned i = 0; i < max_size; i++)
     {
-        maze[i] = new char[size];
+        maze[i] = new char[max_size];
     }
 
     switch (difficulty)
@@ -63,9 +63,9 @@ char** createMaze(unsigned difficulty) // Curent maze design is temporary
                 { '-' , '-', '-' , '-', '-' , '-', '-' , '-', '-' , '-'}
             };
 
-            for (unsigned i = 0; i < size; i++)
+            for (unsigned i = 0; i < max_size; i++)
             {
-                for (unsigned j = 0; j < size; j++)
+                for (unsigned j = 0; j < max_size; j++)
                 {
                     maze[i][j] = temp_maze[i][j];
                 }
@@ -90,9 +90,9 @@ char** createMaze(unsigned difficulty) // Curent maze design is temporary
                 { '-' , '-', '-' , '-', '-' , '-', '-' , '-', '-' , '-'}
             };
 
-            for (unsigned i = 0; i < size; i++)
+            for (unsigned i = 0; i < max_size; i++)
             {
-                for (unsigned j = 0; j < size; j++)
+                for (unsigned j = 0; j < max_size; j++)
                 {
                     maze[i][j] = temp_maze[i][j];
                 }
