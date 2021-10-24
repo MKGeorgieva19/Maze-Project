@@ -1,6 +1,9 @@
 #include <iostream>
+#include <conio.h>
 #include "front-end.h"
 #include "back-end.h"
+
+int currentX = 1, currentY = 0;
 
 char** createMaze(unsigned difficulty) // Curent maze design is temporary
 {
@@ -129,9 +132,7 @@ void game(char** maze, int rows, int cols)
     {
         displayMaze(maze, rows, cols);
 
-        win = true; // just to see if maze prints out
-
-        // makeMove(maze);
+        makeMove(maze);
     }
 
     // da naprawq funkciq deto samo izwejda mazeto
@@ -151,3 +152,56 @@ void displayMaze(char** maze, int rows, int cols)
         cout << endl;
     }
 }
+
+char** makeMove(char** maze)
+{
+    int user_input = _getch();
+
+    system("CLS");
+
+    // will add title function in the future
+
+    switch (user_input)
+    {
+    case UP:
+        if (maze[currentX - 1][currentY] == ' ' && currentX != 0)
+        {
+            maze[currentX][currentY] = ' ';
+            currentX -= 1;
+            maze[currentX][currentY] = '@';
+        }
+        break;
+
+    case DOWN:
+        if (maze[currentX + 1][currentY] == ' ')
+        {
+            maze[currentX][currentY] = ' ';
+            currentX += 1;
+            maze[currentX][currentY] = '@';
+        }
+        break;
+
+    case LEFT:
+        if (maze[currentX][currentY - 1] == ' ' && currentY != 0)
+        {
+            maze[currentX][currentY] = ' ';
+            currentY -= 1;
+            maze[currentX][currentY] = '@';
+        }
+        break;
+
+    case RIGHT:
+        if (maze[currentX][currentY + 1] == ' ')
+        {
+            maze[currentX][currentY] = ' ';
+            currentY += 1;
+            maze[currentX][currentY] = '@';
+        }
+        break;
+    }
+
+    return maze;
+}
+
+
+// make a win function that also shows the number of your turns
