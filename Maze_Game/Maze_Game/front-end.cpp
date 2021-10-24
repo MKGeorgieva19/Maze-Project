@@ -254,6 +254,7 @@ void askForDifficulty()
     cout << "*                                   |__|   |__|   |__|   |_____________________________________________|    *" << endl;
     cout << "*                                                                                                           *" << endl;
     cout << "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" << endl;
+    cout << "currently the only working option is \"easy\" and it's only used for testing (not final)" << endl;
 
     while (true)
     {
@@ -381,7 +382,7 @@ void askForDifficulty()
 
         else
         {
-            //createBoard(option_counter);
+            // createMaze(option_counter);
             break;
         }
     }
