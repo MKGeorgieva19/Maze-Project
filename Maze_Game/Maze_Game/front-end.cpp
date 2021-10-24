@@ -3,10 +3,12 @@
 #include "front-end.h"
 #include "back-end.h"
 
-void printMenu()
+void printMenu()    // Print menu and take user input
 {
     int option_counter = 1;
     bool user_choice = false;
+
+    // Prints out the (default) menu 
 
     cout << "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" << endl;
     cout << "*     ___________                                                                     __                    *" << endl;
@@ -38,7 +40,7 @@ void printMenu()
 
     while (true)
     {
-        int user_input = _getch();
+        int user_input = _getch();  // Get user input without kaving to press enter
 
         system("CLS");
 
@@ -46,24 +48,24 @@ void printMenu()
 
         switch (user_input)
         {
-        case UP:
+        case UP:                            // The user pressed the up arrow
             if (option_counter > 1)
                 option_counter -= 1;
             break;
 
-        case DOWN:
+        case DOWN:                          // The user pressed the down arrow
             if (option_counter < 4)
                 option_counter += 1;
             break;
 
-        case ENTER:
+        case ENTER:                         // The user pressed enter
             user_choice = true;
             break;
         }
 
         if (!user_choice)
         {
-            switch (option_counter)
+            switch (option_counter)         // Prints out the different phases of the menu
             {
             case 1:
                 cout << "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" << endl;
@@ -191,7 +193,7 @@ void printMenu()
             }
         }
 
-        else
+        else    // The user pressed enter to perform some sort of action
         {
             goToChoice(option_counter);
             break;
@@ -199,11 +201,11 @@ void printMenu()
     }
 }
 
-int goToChoice(int option)
+int goToChoice(int option)  // Sends the user to the right place depending on their input
 {
     switch (option)
     {
-    case 1:
+    case 1:     // Before starting the game the program asks the user for difficulty
         askForDifficulty();
         break;
 
@@ -215,7 +217,7 @@ int goToChoice(int option)
         // team();
         break;
 
-    case 4:
+    case 4:     // The user wishes to exit the program
         system("CLS");
         cout << "Thank you for playing our game! :)" << endl;
         exit(0);
