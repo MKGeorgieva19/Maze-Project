@@ -272,7 +272,7 @@ void askForDifficulty()
             break;
 
         case DOWN:
-            if (option_counter < 4)
+            if (option_counter < 3)
                 option_counter += 1;
             break;
 
