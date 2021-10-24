@@ -128,6 +128,8 @@ void game(char** maze, int rows, int cols)
 {
     bool win = false;
 
+    maze[currentX][currentY] = '\2';
+
     while (!win)
     {
         displayMaze(maze, rows, cols);
@@ -168,7 +170,7 @@ char** makeMove(char** maze)
         {
             maze[currentX][currentY] = ' ';
             currentX -= 1;
-            maze[currentX][currentY] = '@';
+            maze[currentX][currentY] = '\2';
         }
         break;
 
@@ -177,7 +179,7 @@ char** makeMove(char** maze)
         {
             maze[currentX][currentY] = ' ';
             currentX += 1;
-            maze[currentX][currentY] = '@';
+            maze[currentX][currentY] = '\2';
         }
         break;
 
@@ -186,7 +188,7 @@ char** makeMove(char** maze)
         {
             maze[currentX][currentY] = ' ';
             currentY -= 1;
-            maze[currentX][currentY] = '@';
+            maze[currentX][currentY] = '\2';
         }
         break;
 
@@ -195,7 +197,7 @@ char** makeMove(char** maze)
         {
             maze[currentX][currentY] = ' ';
             currentY += 1;
-            maze[currentX][currentY] = '@';
+            maze[currentX][currentY] = '\2';
         }
         break;
     }
