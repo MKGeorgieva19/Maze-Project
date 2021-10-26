@@ -21,3 +21,7 @@ void game(char** maze, int rows, int cols);
 void displayMaze(char** maze, int rows, int cols);
 
 char** makeMove(char** maze);
+
+bool checkIfWon(char** maze);
+
+void printWinMessage(int turns);

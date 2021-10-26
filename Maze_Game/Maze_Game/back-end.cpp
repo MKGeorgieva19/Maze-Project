@@ -127,6 +127,7 @@ int getMazeCols(int difficulty)
 
 void game(char** maze, int rows, int cols)
 {
+    int turns = 0;
     bool win = false;
 
     maze[currentX][currentY] = '\2';
@@ -136,10 +137,11 @@ void game(char** maze, int rows, int cols)
         displayMaze(maze, rows, cols);
 
         makeMove(maze);
+        turns++; // replace later on with a function to count the turns correctly
 
         if (checkIfWon(maze))
         {
-            // 
+            printWinMessage(turns);
         }
     }
 
@@ -221,5 +223,13 @@ bool checkIfWon(char** maze)
     return false;
 }
 
+void printWinMessage(int turns)
+{
+    cout << endl;
+
+    cout << "Congratualtions! You escaped the maze!" << endl;
+
+    cout << "You took " << turns << " turns!" << endl;
+}
 
 // make a win function that also shows the number of your turns
