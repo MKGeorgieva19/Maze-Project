@@ -4,6 +4,7 @@
 #include "back-end.h"
 
 int currentX = 1, currentY = 0;
+int endX, endY;
 
 char** createMaze(unsigned difficulty) // Curent maze design is temporary
 {
@@ -135,6 +136,11 @@ void game(char** maze, int rows, int cols)
         displayMaze(maze, rows, cols);
 
         makeMove(maze);
+
+        if (checkIfWon(maze))
+        {
+            // 
+        }
     }
 
     // da naprawq funkciq deto samo izwejda mazeto
@@ -203,6 +209,16 @@ char** makeMove(char** maze)
     }
 
     return maze;
+}
+
+bool checkIfWon(char** maze)
+{
+    if (maze[endX][endY] != ' ')
+    {
+        return true;
+    }
+
+    return false;
 }
 
 
