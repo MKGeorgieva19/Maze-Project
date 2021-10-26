@@ -27,3 +27,5 @@ bool checkIfWon(char** maze);
 void printWinMessage(int turns);
 
 void resetGame(char** maze, int rows);
+
+void returnToMenu();

@@ -249,7 +249,14 @@ void resetGame(char** maze, int rows)
 
     delete[] maze;
 
-    // returnToMenu();
+    returnToMenu();
+}
+
+void returnToMenu()
+{
+    cout << endl;
+    cout << "Do you want to go to the main menu?" << endl;
+    cout << "Press \"Enter\" to go to the menu or \"Esc\" to exit the program";
 }
 
 // make a win function that also shows the number of your turns
