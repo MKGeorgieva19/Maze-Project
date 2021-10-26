@@ -237,4 +237,19 @@ void printWinMessage(int turns)
     cout << "You took " << turns << " turns!" << endl;
 }
 
+void resetGame(char** maze, int rows)
+{
+    currentX = 1;
+    currentY = 0;
+
+    for (int i = 0; i < rows; ++i)
+    {
+        delete[] maze[i];
+    }
+
+    delete[] maze;
+
+    // returnToMenu();
+}
+
 // make a win function that also shows the number of your turns
