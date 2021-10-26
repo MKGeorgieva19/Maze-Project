@@ -114,10 +114,10 @@ int getMazeRows(int difficulty)
 {
     switch (difficulty)
     {
-    case 1:
-        return 13;
-    case 2:
-    case 3:
+        case 1:
+            return 13;
+        case 2:
+        case 3:
     }
 }
 
@@ -125,10 +125,10 @@ int getMazeCols(int difficulty)
 {
     switch (difficulty)
     {
-    case 1:
-        return 19;
-    case 2:
-    case 3:
+        case 1:
+            return 19;
+        case 2:
+        case 3:
     }
 }
 
@@ -184,41 +184,41 @@ char** makeMove(char** maze)
 
     switch (user_input)
     {
-    case UP:
-        if (maze[currentX - 1][currentY] == ' ' && currentX != 0)
-        {
-            maze[currentX][currentY] = ' ';
-            currentX -= 1;
-            maze[currentX][currentY] = '\2';
-        }
-        break;
+        case UP:
+            if (maze[currentX - 1][currentY] == ' ' && currentX != 0)
+            {
+                maze[currentX][currentY] = ' ';
+                currentX -= 1;
+                maze[currentX][currentY] = '\2';
+            }
+            break;
 
-    case DOWN:
-        if (maze[currentX + 1][currentY] == ' ')
-        {
-            maze[currentX][currentY] = ' ';
-            currentX += 1;
-            maze[currentX][currentY] = '\2';
-        }
-        break;
+        case DOWN:
+            if (maze[currentX + 1][currentY] == ' ')
+            {
+                maze[currentX][currentY] = ' ';
+                currentX += 1;
+                maze[currentX][currentY] = '\2';
+            }
+            break;
 
-    case LEFT:
-        if (maze[currentX][currentY - 1] == ' ' && currentY != 0)
-        {
-            maze[currentX][currentY] = ' ';
-            currentY -= 1;
-            maze[currentX][currentY] = '\2';
-        }
-        break;
+        case LEFT:
+            if (maze[currentX][currentY - 1] == ' ' && currentY != 0)
+            {
+                maze[currentX][currentY] = ' ';
+                currentY -= 1;
+                maze[currentX][currentY] = '\2';
+            }
+            break;
 
-    case RIGHT:
-        if (maze[currentX][currentY + 1] == ' ')
-        {
-            maze[currentX][currentY] = ' ';
-            currentY += 1;
-            maze[currentX][currentY] = '\2';
-        }
-        break;
+        case RIGHT:
+            if (maze[currentX][currentY + 1] == ' ')
+            {
+                maze[currentX][currentY] = ' ';
+                currentY += 1;
+                maze[currentX][currentY] = '\2';
+            }
+            break;
     }
 
     return maze;
@@ -237,9 +237,7 @@ bool checkIfWon(char** maze)
 void printWinMessage(int turns)
 {
     cout << endl;
-
-    cout << "Congratualtions! You escaped the maze!" << endl;
-
+    cout << "Congratualtions! l You escaped the maze!" << endl;
     cout << "You took " << turns << " turns!" << endl;
 }
 
@@ -263,6 +261,26 @@ void returnToMenu()
     cout << endl;
     cout << "Do you want to go to the main menu?" << endl;
     cout << "Press \"Enter\" to go to the menu or \"Esc\" to exit the program";
+
+    int user_input = _getch();  // Get user input without kaving to press enter
+
+    // will add title function in the future
+
+    switch (user_input)
+    {
+        case ENTER:                            // The user pressed the up arrow
+            system("CLS");
+            printMenu();
+            break;
+
+        case ESC:                          // The user pressed the down arrow
+            system("CLS");
+            cout << "Thank you for playing our game! :)" << endl;
+            exit(0);
+    }
+
+    // naprawi go while cikul dokato ne se izbere ili enter ili esc
+
 }
 
 // make a win function that also shows the number of your turns

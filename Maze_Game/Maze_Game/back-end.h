@@ -5,6 +5,7 @@
 using namespace std;
 
 #define ENTER	  13
+#define ESC		  27
 #define UP        72
 #define LEFT      75
 #define RIGHT     77
