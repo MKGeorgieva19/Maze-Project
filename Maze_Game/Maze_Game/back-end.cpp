@@ -115,9 +115,7 @@ int getMazeRows(int difficulty)
     switch (difficulty)
     {
         case 1:
-            return 13
-        case 2:
-        case 3:
+            return 13;
     }
 }
 
@@ -127,8 +125,6 @@ int getMazeCols(int difficulty)
     {
         case 1:
             return 19;
-        case 2:
-        case 3:
     }
 }
 
