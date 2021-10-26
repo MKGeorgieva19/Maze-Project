@@ -144,7 +144,9 @@ void game(char** maze, int rows, int cols)
 
         if (checkIfWon(maze))
         {
+            displayMaze(maze, rows, cols);
             printWinMessage(turns);
+            win = true;
         }
     }
 
