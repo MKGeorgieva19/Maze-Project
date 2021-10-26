@@ -116,6 +116,8 @@ int getMazeRows(int difficulty)
     {
     case 1:
         return 13;
+    case 2:
+    case 3:
     }
 }
 
@@ -125,6 +127,8 @@ int getMazeCols(int difficulty)
     {
     case 1:
         return 19;
+    case 2:
+    case 3:
     }
 }
 
@@ -149,6 +153,8 @@ void game(char** maze, int rows, int cols)
             win = true;
         }
     }
+
+    resetGame(maze, rows);
 
     // da naprawq funkciq deto samo izwejda mazeto
 
