@@ -1,12 +1,12 @@
 #include <iostream>
-#include <conio.h>
+#include <conio.h>  // Used for _getch()
 #include "front-end.h"
 #include "back-end.h"
 
 void printMenu()    // Print menu and take user input
 {
-    int option_counter = 1;
-    bool user_choice = false;
+    int option_counter = 1;     // Keeps track of the position of the user in the menu
+    bool user_choice = false;   // Becomes true if the user pressed enter
 
     // Prints out the (default) menu 
 
@@ -38,9 +38,9 @@ void printMenu()    // Print menu and take user input
     cout << "*                                                                                                           *" << endl;
     cout << "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" << endl;
 
-    while (true)
+    while (true)    // Endless cycle that only stops if the program is exited or the user pressed enter
     {
-        int user_input = _getch();  // Get user input without kaving to press enter
+        int user_input = _getch();  // Get user input without having to press enter
 
         system("CLS");
 
@@ -63,7 +63,7 @@ void printMenu()    // Print menu and take user input
             break;
         }
 
-        if (!user_choice)
+        if (!user_choice)   
         {
             switch (option_counter)         // Prints out the different phases of the menu
             {
@@ -209,11 +209,11 @@ int goToChoice(int option)  // Sends the user to the right place depending on th
         askForDifficulty();
         break;
 
-    case 2:
+    case 2:     // Prints out game rules
         rules();
         break;
 
-    case 3:
+    case 3:     // Prints out team information
         team();
         break;
 
@@ -224,10 +224,12 @@ int goToChoice(int option)  // Sends the user to the right place depending on th
     }
 }
 
-void askForDifficulty()
+void askForDifficulty() // Asks the user for maze difficulty
 {
-    int option_counter = 1;
-    bool user_choice = false;
+    int option_counter = 1;     // Keeps track of the position of the user in the menu
+    bool user_choice = false;   // Becomes true if the user pressed enter
+
+    // Prints out default menu for difficulties
 
     cout << "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" << endl;
     cout << "*     ___________                                                                     __                    *" << endl;
@@ -260,7 +262,7 @@ void askForDifficulty()
 
     while (true)
     {
-        int user_input = _getch();
+        int user_input = _getch();  // Get user input without having to press enter
 
         system("CLS");
 
@@ -268,24 +270,24 @@ void askForDifficulty()
 
         switch (user_input)
         {
-        case UP:
+        case UP:                        // The user pressed the up arrow
             if (option_counter > 1)
                 option_counter -= 1;
             break;
 
-        case DOWN:
+        case DOWN:                      // The user pressed the down arrow
             if (option_counter < 3)
                 option_counter += 1;
             break;
 
-        case ENTER:
+        case ENTER:                     // The user pressed enter
             user_choice = true;
             break;
         }
 
         if (!user_choice)
         {
-            switch (option_counter)
+            switch (option_counter)         // Prints out the different phases of the menu
             {
             case 1:
                 cout << "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" << endl;
@@ -384,13 +386,13 @@ void askForDifficulty()
 
         else
         {
-            game(createMaze(option_counter), getMazeRows(option_counter), getMazeCols(option_counter));
+            game(createMaze(option_counter), getMazeRows(option_counter), getMazeCols(option_counter));     // Starts game with the according difficulty
             break;
         }
     }
 }
 
-void rules()
+void rules()    // Prints out rules
 {
     cout << "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" << endl;
     cout << "*     ___________                                                                     __                    *" << endl;
@@ -420,10 +422,10 @@ void rules()
     cout << "*                                                                                                           *" << endl;
     cout << "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" << endl;
 
-    returnToMenu();
+    returnToMenu();     // Asks user if they want to return to the main menu
 }
 
-void team()
+void team()    // Prints out team information
 {
     cout << "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" << endl;
     cout << "*     ___________                                                                     __                    *" << endl;
@@ -453,5 +455,5 @@ void team()
     cout << "*                                                                                                           *" << endl;
     cout << "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" << endl;
 
-    returnToMenu();
+    returnToMenu();     // Asks user if they want to return to the main menu
 }
