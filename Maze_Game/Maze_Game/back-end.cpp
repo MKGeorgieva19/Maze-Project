@@ -5,6 +5,7 @@
 
 int currentX = 1, currentY = 0;
 int endX, endY;
+int turns = 0;
 
 char** createMaze(unsigned difficulty) // Curent maze design is temporary
 {
@@ -130,7 +131,6 @@ int getMazeCols(int difficulty)
 
 void game(char** maze, int rows, int cols)
 {
-    int turns = 0;
     bool win = false;
 
     maze[currentX][currentY] = '\2';
@@ -140,12 +140,11 @@ void game(char** maze, int rows, int cols)
         displayMaze(maze, rows, cols);
 
         makeMove(maze);
-        turns++; // replace later on with a function to count the turns correctly
 
         if (checkIfWon(maze))
         {
             displayMaze(maze, rows, cols);
-            printWinMessage(turns);
+            printWinMessage();
             win = true;
         }
     }
@@ -182,6 +181,7 @@ char** makeMove(char** maze)
                 maze[currentX][currentY] = ' ';
                 currentX -= 1;
                 maze[currentX][currentY] = '\2';
+                turns++;
             }
             break;
 
@@ -191,6 +191,7 @@ char** makeMove(char** maze)
                 maze[currentX][currentY] = ' ';
                 currentX += 1;
                 maze[currentX][currentY] = '\2';
+                turns++;
             }
             break;
 
@@ -200,6 +201,7 @@ char** makeMove(char** maze)
                 maze[currentX][currentY] = ' ';
                 currentY -= 1;
                 maze[currentX][currentY] = '\2';
+                turns++;
             }
             break;
 
@@ -209,6 +211,7 @@ char** makeMove(char** maze)
                 maze[currentX][currentY] = ' ';
                 currentY += 1;
                 maze[currentX][currentY] = '\2';
+                turns++;
             }
             break;
     }
@@ -226,7 +229,7 @@ bool checkIfWon(char** maze)
     return false;
 }
 
-void printWinMessage(int turns)
+void printWinMessage()
 {
     cout << endl;
     cout << "Congratualtions! You escaped the maze!" << endl;
@@ -237,6 +240,7 @@ void resetGame(char** maze, int rows)
 {
     currentX = 1;
     currentY = 0;
+    turns = 0;
 
     for (int i = 0; i < rows; ++i)
     {

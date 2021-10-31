@@ -25,7 +25,7 @@ char** makeMove(char** maze);
 
 bool checkIfWon(char** maze);
 
-void printWinMessage(int turns);
+void printWinMessage();
 
 void resetGame(char** maze, int rows);
 
