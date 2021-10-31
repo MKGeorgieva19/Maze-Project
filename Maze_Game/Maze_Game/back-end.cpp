@@ -157,6 +157,8 @@ void displayMaze(char** maze, int rows, int cols)
 {
     for (int i = 0; i < rows; i++)
     {
+        cout << "              ";
+
         for (int j = 0; j < cols; j++)
         {
             cout << maze[i][j];
