@@ -210,7 +210,7 @@ int goToChoice(int option)  // Sends the user to the right place depending on th
         break;
 
     case 2:     // Prints out game rules
-        rules();
+        printRules();
         break;
 
     case 3:     // Prints out team information
@@ -392,7 +392,7 @@ void askForDifficulty() // Asks the user for maze difficulty
     }
 }
 
-void rules()    // Prints out rules
+void printRules()    // Prints out rules
 {
     cout << "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" << endl;
     cout << "*     ___________                                                                     __                    *" << endl;

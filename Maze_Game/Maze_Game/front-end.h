@@ -8,6 +8,6 @@ int goToChoice(int option);
 
 void askForDifficulty();
 
-void rules();
+void printRules();
 
 void team();
