@@ -210,7 +210,7 @@ int goToChoice(int option)  // Sends the user to the right place depending on th
         break;
 
     case 2:
-        // about();
+        // rules();
         break;
 
     case 3:
@@ -390,7 +390,7 @@ void askForDifficulty()
     }
 }
 
-void about()
+void rules()
 {
     // about information
 }
