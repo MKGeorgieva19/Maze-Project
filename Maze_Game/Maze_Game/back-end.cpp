@@ -250,23 +250,28 @@ void returnToMenu()
 {
     cout << endl;
     cout << "Do you want to go to the main menu?" << endl;
-    cout << "Press \"Enter\" to go to the menu or \"Esc\" to exit the program";
+    cout << "Press \"Enter\" to go to the menu or \"Esc\" to exit the program" << endl;
 
-    int user_input = _getch();  // Get user input without having to press enter
+    bool flag = false;  // Keeps track if enter or esc was pressed
 
-    switch (user_input)
+    while (!flag)
     {
-        case ENTER:
+        int user_input = _getch();  // Get user input without kaving to press enter
+
+        // will add title function in the future
+
+        switch (user_input)
+        {
+        case ENTER:                            // The user pressed the up arrow
             system("CLS");
             printMenu();
+            flag = true;
             break;
 
-        case ESC:  
+        case ESC:                          // The user pressed the down arrow
             system("CLS");
             cout << "Thank you for playing our game! :)" << endl;
             exit(0);
+        }
     }
-
-    // naprawi go while cikul dokato ne se izbere ili enter ili esc
-
 }
