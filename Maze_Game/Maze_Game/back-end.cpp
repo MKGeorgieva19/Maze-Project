@@ -7,10 +7,10 @@ int currentX = 1, currentY = 0;
 int endX, endY;
 int turns = 0;
 
-char** createMaze(unsigned difficulty) // Curent maze design is temporary
+char** createMaze(unsigned difficulty) // Creates maze according to the difficulty
 {
     unsigned max_size = 40;
-    char** maze = 0;
+    char** maze = 0;                // Maze is a dynamic matrix
     maze = new char* [max_size];
 
     for (unsigned i = 0; i < max_size; i++)
@@ -20,7 +20,7 @@ char** createMaze(unsigned difficulty) // Curent maze design is temporary
 
     switch (difficulty)
     {
-        case 1: // Only case one is set up correctly for now because of testing
+        case 1: // Easy maze
         {
             char temp_maze[13][19] = {
             {'.','-','-','.','-','-','.','-','-','.','-','-','.','-','-','.','-','-','.'},
@@ -53,7 +53,7 @@ char** createMaze(unsigned difficulty) // Curent maze design is temporary
             break;
         }
 
-        case 2:
+        case 2: // Medium maze
         {
             char temp_maze[10][10] = {
                 { '-' , '-', '-' , '-', '-' , '-', '-' , '-', '-' , '-'},
@@ -80,7 +80,7 @@ char** createMaze(unsigned difficulty) // Curent maze design is temporary
             break;
         }
 
-        case 3:
+        case 3: // Hard maze
         {
             char temp_maze[10][10] = {
                 { '-' , '-', '-' , '-', '-' , '-', '-' , '-', '-' , '-'},
