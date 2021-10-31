@@ -214,7 +214,7 @@ int goToChoice(int option)  // Sends the user to the right place depending on th
         break;
 
     case 3:     // Prints out team information
-        team();
+        printTeamInformation();
         break;
 
     case 4:     // The user wishes to exit the program
@@ -425,7 +425,7 @@ void printRules()    // Prints out rules
     returnToMenu();     // Asks user if they want to return to the main menu
 }
 
-void team()    // Prints out team information
+void printTeamInformation()    // Prints out team information
 {
     cout << "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" << endl;
     cout << "*     ___________                                                                     __                    *" << endl;

@@ -1,5 +1,5 @@
 #include <iostream>
-#include <conio.h>
+#include <conio.h>      // Used for _getch()
 #include "front-end.h"
 #include "back-end.h"
 

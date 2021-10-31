@@ -10,4 +10,4 @@ void askForDifficulty();
 
 void printRules();
 
-void team();
+void printTeamInformation();
