@@ -1,5 +1,5 @@
 # Maze-Project
-### Hello, we're team Beyond the wall and this is our Maze game!
+### Hello, we're team **Beyond the wall** and this is our Maze game!
 ## Team members:
 * Miriam Georgieva 9G - Scrum Trainer - MKGeorgieva19@codingburgas.bg
 * Tereza Opanska 9V - Back-end Developer - TNOpanska19@codingburgas.bg
@@ -8,12 +8,12 @@
 
 ## Project description:
 When you run the game the first thing you see is this menu:
-![Main menu](README images/main menu.png)
+![Team Logo](/README images/main menu.png)
 
 You can control it with the Up and Down arrows on your PC keyboard. When you choose *Play* there is another menu, where you need to choose the difficulty of the game you want to play: *Easy*, *Medium* and *Hard*. 
-![Main menu](README images/game difficulty.png)
+![Main menu](/README images/game difficulty.png)
 
 In the game you control the little smily face with all of the arrow keys on your keyboard. And when you are done it should look something like this:
-![Main menu](README images/game.png)
+![Main menu](/README images/game.png)
 
 And when you press *Enter* you should go back to the main menu.
