@@ -8,12 +8,12 @@
 
 ## Project description:
 When you run the game the first thing you see is this menu:
-![Team Logo](/README images/main menu.png)
+![Menu](/README images/main menu.png)
 
 You can control it with the Up and Down arrows on your PC keyboard. When you choose *Play* there is another menu, where you need to choose the difficulty of the game you want to play: *Easy*, *Medium* and *Hard*. 
-![Main menu](/README images/game difficulty.png)
+![Levels](/README images/game difficulty.png)
 
 In the game you control the little smily face with all of the arrow keys on your keyboard. And when you are done it should look something like this:
-![Main menu](/README images/game.png)
+![game](/README images/game.png)
 
 And when you press *Enter* you should go back to the main menu.
