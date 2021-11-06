@@ -258,8 +258,7 @@ void askForDifficulty() // Asks the user for maze difficulty
     cout << "*                                   |__|   |__|   |__|   |_____________________________________________|    *" << endl;
     cout << "*                                                                                                           *" << endl;
     cout << "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" << endl;
-    cout << "currently the only working option is \"easy\" and it's only used for testing (not final)" << endl;
-
+    
     while (true)
     {
         int user_input = _getch();  // Get user input without having to press enter
