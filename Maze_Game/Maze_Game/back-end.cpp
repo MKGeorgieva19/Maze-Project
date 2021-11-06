@@ -325,7 +325,7 @@ void resetGame(char** maze, int rows)
 void returnToMenu()
 {
     cout << endl;
-    cout << "Do you want to go to the main menu?" << endl;
+    cout << "Do you wish to go to the main menu?" << endl;
     cout << "Press \"Enter\" to go to the menu or \"Esc\" to exit the program" << endl;
 
     bool flag = false;  // Keeps track if enter or esc was pressed
