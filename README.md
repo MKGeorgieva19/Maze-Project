@@ -1,10 +1,10 @@
 # Maze-Project
 ### Hello, we're team "*Beyond the wall*" and this is our Maze game!
 ## Team members:
-* Miriam Georgieva 9G - Scrum Trainer - MKGeorgieva19@codingburgas.bg
-* Tereza Opanska 9V - Back-end Developer - TNOpanska19@codingburgas.bg
-* Niq Runcheva 9A - Front-end Developer - NSRuncheva19@codingburgas.bg
-* Lubomir Bozukov 9B - QA - LVBozukov19@codingburgas.bg
+* Miriam Georgieva 10G - Scrum Trainer - MKGeorgieva19@codingburgas.bg
+* Tereza Opanska 10V - Back-end Developer - TNOpanska19@codingburgas.bg
+* Niq Runcheva 10A - Front-end Developer - NSRuncheva19@codingburgas.bg
+* Lubomir Bozukov 10B - QA - LVBozukov19@codingburgas.bg
 
 ## How to play the game:
 When you run the game the first thing you see is this menu:
