@@ -1,8 +1,8 @@
 # Maze-Project
 ### Hello, we're team "*Beyond the wall*" and this is our Maze game!
 ## 💻 Team members:
-* Niq Runcheva 10A - Front-end Developer - NSRuncheva19@codingburgas.bg
-* Lubomir Bozukov 10B - QA - LVBozukov19@codingburgas.bg
+* Niya Runcheva 10A - Front-end Developer - NSRuncheva19@codingburgas.bg
+* Lyubomir Bozukov 10B - QA - LVBozukov19@codingburgas.bg
 * Tereza Opanska 10V - Back-end Developer - TNOpanska19@codingburgas.bg
 * Miriam Georgieva 10G - Scrum Trainer - MKGeorgieva19@codingburgas.bg
 
